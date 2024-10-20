@@ -1,0 +1,494 @@
+
+ 
+ /* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navigation Bar Styles */
+header {
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Balance Mind Hub Title */
+.site-title {
+  font-size: 2rem; /* Larger font size */
+  font-weight: bold; /* Bold for emphasis */
+  color: #1c2d5a; /* Darker blue */
+  margin-bottom: 15px; /* Space between title and links */
+  font-family: 'Poppins', sans-serif;
+  
+ 
+  
+  letter-spacing: 1px; 
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links li a{
+  margin: 0;
+  font-weight: bold;
+}
+
+
+.nav-links a {
+  text-decoration: none;
+  color: #5a5a5a;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+/* Active Link Styling */
+.nav-links a.active {
+  background-color: #89b0f9;
+  color: #1c2d5a;
+}
+
+/* Hover Effect for Links */
+.nav-links a:hover {
+  background-color: #326fdf;
+  color: #ffffff;
+}
+
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: row;
+      justify-content: space-between;
+  }
+
+  .site-title {
+      font-size: 1.8rem;
+  }
+
+  .mobile-menu-toggle {
+      display: block;
+  }
+
+  .nav-links {
+      display: none;
+      flex-direction: column;
+        
+      position: absolute;
+      top: 60px; /* Adjust based on your header height */
+      right: 0;
+      background-color: #fff;
+      width: 100%;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.show {
+      display: flex;
+  }
+
+  .nav-links li {
+      width: 100%;
+      text-align: left;
+  }
+
+  .nav-links a {
+      width: 100%;
+      padding: 10px;
+      font-size: 1.2rem;
+  }
+}
+
+
+/* Hero Section */        
+.hero {
+  text-align: center;
+  padding: 60px 30px;
+  background-image:linear-gradient(to bottom, #4f8ff7, #ffffff);
+}
+
+
+
+
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;  
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background-color: #4f8ff7;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Features Section */
+.features {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #fff;
+}
+
+.features h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+/* Feature Cards Section */
+.feature-cards {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  flex-wrap: wrap;
+  padding: 50px 20px;
+  background-color: #f9f9f9; /* Light background to distinguish section */
+  gap: 10px; /* Add space between cards */
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 30%; /* Responsive width */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add smooth hover effect */
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Slight lift effect on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 80px; /* Ensure consistent icon size */
+  margin-bottom: 20px; /* Add space between image and title */
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #1c2d5a;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.feature-icon {
+  font-size: 48px; /* Adjust the size of the icon */
+  color: #1c2d5a; /* Change the color of the icon */
+  margin-bottom: 15px; /* Add some space below the icon */
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card {
+      width: 45%; /* Adjust card size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+      width: 80%; /* Full width on very small screens */
+  }
+}
+
+
+/* About Section */
+.about {
+  padding: 50px 20px;
+  background-color: #f0f4f7;
+  background-image:linear-gradient(to bottom,#ffffff  , #4f8ff7);
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.about-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #e0e4e8;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tab-button.active {
+  background-color: #1E40AF;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow to active button */
+}
+
+.tab-button:hover {
+  background-color: #4f8ff7;
+  color: white;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Adds a deeper shadow on hover */
+}
+
+
+.tab-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.text-content {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.image-content img {
+  max-width: 300px;     
+  height: 300px;
+  border-radius: 10px;
+}
+
+/* For tablets and smaller devices */
+@media (max-width: 768px) {
+  .tab-content {
+      flex-direction: column; /* Stack text and image vertically */
+      align-items: center; /* Center align text and image */
+  }
+
+  .image-content img {
+      max-width: 200px; /* Reduce the image size */
+      height: 180px;
+      margin-top: 20px; /* Add spacing between the text and image */
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+  .tab-content {
+      padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  .image-content img {
+      max-width: 100px; /* Further reduce the image size for mobile */
+      height: 100px;
+      width: 100%; /* Ensure it scales down to fit the container */
+      margin-top: 15px;
+  }
+}
+
+
+.tab-content.hidden {
+  display: none; /* Add this class to hide */
+}
+
+.tab-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.tab-content p {
+  font-size: 1rem;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+
+
+.hidden {
+  display: none; /* Class to hide elements */
+}
+
+.active {
+  font-weight: bold; /* Style for active button */
+}
+
+/* Add some responsive styles */
+@media (max-width: 768px) {
+  .about h2 {
+      font-size: 2rem;
+  }
+
+  .tab-button {
+      padding: 8px 15px;
+      font-size: 0.9rem;
+  }
+
+  .tab-content {
+      padding: 15px;
+  }
+}
+
+
+
+
+/* Footer */
+footer {
+  background-color: #EFF6FF;
+  padding: 20px;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Allow sections to wrap */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1;
+  padding: 20px;
+  min-width: 300px; /* Minimum width to keep items aligned on smaller screens */
+}
+
+.footer-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-section form input,
+.footer-section form textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  width: 100%; /* Ensure inputs take up full width */
+}
+
+.footer-section form button {
+  background-color: #4f8ff7;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.social-icons {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons li {
+  margin: 0 10px;
+}
+
+.social-icons img {
+  width: 24px;
+}
+
+/* Responsive Design */
+
+/* Tablets and smaller devices (768px and below) */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column; /* Stack sections vertically */
+    align-items: center;
+   
+  }
+
+  .footer-section {
+    margin-bottom: 20px;
+    text-align: center; /* Center the text for smaller screens */
+    padding: 10px;
+  }
+
+  .footer-section form input,
+  .footer-section form textarea {
+    width: 100%; /* Full width for form inputs */
+  }
+  
+  .social-icons {
+    justify-content: center; /* Keep social icons centered */
+  }
+}
+
+/* Extra small devices (480px and below) */
+@media (max-width: 480px) {
+  .footer-section h4 {
+    font-size: 1.2em; /* Slightly smaller font size */
+  }
+
+  .footer-section form input,
+  .footer-section form textarea {
+    font-size: 0.9em;
+    width: 90%;
+    /* Adjust font size for smaller inputs */
+  }
+
+  .footer-section form button {
+    font-size: 0.9em;
+    width: 95%; /* Smaller button font size */
+  }
+}

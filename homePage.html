@@ -1,0 +1,125 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Balance Mind Hub</title>
+      <link rel="stylesheet" href="css/styles.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+
+  </head>
+  <body>
+    <header>
+        <nav class="navbar">
+            <h1 class="site-title">Balance Mind Hub</h1>
+            <div class="mobile-menu-toggle" id="mobile-toggle">
+                <span><i class="bi bi-list"></i></span> 
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="homePage.html" class="active">Home</a></li>
+                <li><a href="selfAssessment.html" >Self-Assessment</a></li>
+                <li><a href="communityForum.html">Community Forum</a></li>
+                <li><a href="#">Resource Library</a></li>
+            </ul>
+
+            
+        </nav>
+    </header>
+    
+    
+
+      <main>
+          <section class="hero"  >
+              <h1>Welcome to Balance Mind Hub: Your Path To Healthier Mind</h1>
+              <p>Empowering You with the Tools, Resources, and Support for Mental Well-being</p>
+              <button class="cta-button">Start Your Wellness Journey</button>
+          </section>
+
+          <section class="features">
+            <h2>Empowering Features for Your Well-being</h2>
+            <div class="feature-cards">
+          
+              <!-- Self-Assessment Icon -->
+              <div class="card">
+                <i class="fas fa-brain feature-icon"></i> <!-- Font Awesome icon for self-assessment -->
+                <h3>Self Assessment and Mindfulness Tools</h3>
+                <p>Gain insights into your mental health with our scientifically designed tools.</p>
+              </div>
+          
+              <!-- Community Hub Icon -->
+              <div class="card">
+                <i class="fas fa-users feature-icon"></i> <!-- Font Awesome icon for community hub -->
+                <h3>Peer Support Community Hub</h3>
+                <p>Connect with peers in a safe, moderated environment for sharing and support.</p>
+              </div>
+          
+              <!-- Resource Library Icon -->
+              <div class="card">
+                <i class="fas fa-book-open feature-icon"></i> <!-- Font Awesome icon for resource library -->
+                <h3>Mental Health Resource Library</h3>
+                <p>Explore a wealth of articles, videos, and expert advice on mental health topics.</p>
+              </div>
+              
+            </div>
+          </section>
+
+
+          <section class="about">
+            <h2>About Balance Mind Hub</h2>
+            <div class="about-content">
+                <div class="about-tabs">
+                    <button class="tab-button active" onclick="showTab(event, 'who-we-are')">Who We Are</button>
+                    <button class="tab-button" onclick="showTab(event, 'our-goals')">Our Goals</button>
+                    <button class="tab-button" onclick="showTab(event, 'our-team')">Our Team</button>
+                </div>
+                <div class="tab-content" id="tab-content">
+                    <div class="text-content">
+                        <h3 id="tab-title">Who We Are</h3>
+                        <p id="tab-paragraph">
+                            Balance Mind Hub is a compassionate collective of mental health professionals, tech innovators, and empathetic individuals united by a common purpose: to revolutionize mental health care accessibility and engagement...
+                        </p>
+                    </div>
+                    <div class="image-content">
+                        <img id="tab-image"    src="img/meditating.jpg" alt="Illustration of a person meditating">
+                    </div>
+                </div>
+            </div>
+        </section>
+          
+      </main>
+
+      <footer>
+          <div class="footer-content">
+              <div class="footer-section">
+                  <h4>BalancedMind Hub</h4>
+                  <p>Your partner in mental wellness</p>
+              </div>
+              <div class="footer-section">
+                  <h4>Contact Us</h4>
+                  <form id="contact-form">
+                      <input type="text" placeholder="Name">
+                      <input type="email" placeholder="Email">
+                      <textarea placeholder="Message"></textarea>
+                      <button type="submit">Send</button>
+                  </form>
+              </div>
+              <div class="footer-section">
+                <h4>Social</h4>
+                <ul class="social-icons">
+                    <li><a href="#"><img src="img/facebook_icon.png" alt="Facebook"></a></li>
+                    <li><a href="#"><img src="img/twitter-icon.png" alt="Twitter"></a></li>
+                    <li><a href="#"><img src="img/instagram-icon.png" alt="Instagram"></a></li>
+                    <li><a href="#"><img src="img/youtube-icon.png" alt="YouTube"></a></li>
+                </ul>
+            </div>
+          </div>
+          <p>&copy; 2024 BalancedMindHub. All Rights Reserved.</p>
+      </footer>
+
+      <script src="js/script.js"></script>
+  </body>
+  </html>
