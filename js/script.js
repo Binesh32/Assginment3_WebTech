@@ -86,3 +86,88 @@ dislikeButtons.forEach(button => {
     });
 });
 
+// Character counter for title and content fields
+const titleInput = document.getElementById('discussion-title');
+const titleCharCount = titleInput.nextElementSibling;
+const contentInput = document.getElementById('discussion-content');
+const contentCharCount = contentInput.nextElementSibling;
+
+titleInput.addEventListener('input', () => {
+    titleCharCount.textContent = `${titleInput.value.length} / 100 characters`;
+});
+
+contentInput.addEventListener('input', () => {
+    contentCharCount.textContent = `${contentInput.value.length} / 5000 characters`;
+});
+
+// Cancel button to reset form
+const cancelButton = document.querySelector('.cancel-btn');
+cancelButton.addEventListener('click', () => {
+    document.getElementById('discussion-form').reset();
+    titleCharCount.textContent = '0 / 100 characters';
+    contentCharCount.textContent = '0 / 5000 characters';
+});
+
+/// Multi step
+var currentStep = 1;
+
+function displayStep(stepNumber) {
+    if (stepNumber >= 1 && stepNumber <= 3) {
+        // Hide the current step and show the new step
+        $(".step").hide();
+        $(".step-" + stepNumber).show();
+        
+        // Update the progress bar and step indicator
+        currentStep = stepNumber;
+        updateProgressBar();
+    }
+}
+
+$(document).ready(function() {
+    // Initially hide all steps except for the first one
+    $('#multi-step-form').find('.step').slice(1).hide();
+
+    // Next button click event
+    $(".next-step").click(function() {
+        if (currentStep < 3) {
+            $(".step-" + currentStep).addClass("animate__animated animate__fadeOutLeft");
+            currentStep++;
+            setTimeout(function() {
+                $(".step").removeClass("animate__animated animate__fadeOutLeft").hide();
+                $(".step-" + currentStep).show().addClass("animate__animated animate__fadeInRight");
+                updateProgressBar();
+            }, 500);
+        }
+    });
+
+    // Previous button click event
+    $(".prev-step").click(function() {
+        if (currentStep > 1) {
+            $(".step-" + currentStep).addClass("animate__animated animate__fadeOutRight");
+            currentStep--;
+            setTimeout(function() {
+                $(".step").removeClass("animate__animated animate__fadeOutRight").hide();
+                $(".step-" + currentStep).show().addClass("animate__animated animate__fadeInLeft");
+                updateProgressBar();
+            }, 500);
+        }
+    });
+
+    // Function to update the progress bar and step circles
+    function updateProgressBar() {
+        var progressPercentage = ((currentStep - 1) / 2) * 100;
+        $(".progress-bar").css("width", progressPercentage + "%");
+
+        // Update step circle active state
+        $(".step-circle").each(function(index) {
+            if (index < currentStep) {
+                $(this).addClass("active");
+            } else {
+                $(this).removeClass("active");
+            }
+        });
+    }
+
+    // Initialize progress bar on page load
+    updateProgressBar();
+});

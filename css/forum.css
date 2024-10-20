@@ -1,0 +1,182 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: linear-gradient(to bottom, #ffffff, #80a8e8);
+  margin: 0;
+  padding: 0;
+}
+
+.forum-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.forum-header h2 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.new-discussion-form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin: 20px auto;
+  width: 60%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.new-discussion-form h2 {
+  margin-bottom: 10px;
+}
+
+.new-discussion-form p {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.form-group textarea {
+  resize: none;
+}
+
+.form-group small {
+  display: block;
+  margin-top: 5px;
+  color: #999;
+  font-size: 12px;
+}
+
+/* Base Style for the select element */
+select {
+  font-size: 16px;  /* Default font size */
+  padding: 10px;    /* Default padding */
+  height: auto;     /* Ensure height is responsive */
+  width: 100%;      /* Takes up the full width by default */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Style for the options inside the dropdown */
+select option {
+  font-size: 16px;  /* Default font size for options */
+  padding: 10px;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  select {
+    font-size: 14px;  /* Smaller font for medium devices */
+    padding: 8px;
+  }
+  
+  select option {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  select {
+    font-size: 12px;  /* Smaller font for mobile devices */
+    padding: 6px;
+  }
+  
+  select option {
+    font-size: 12px;
+  }
+}
+
+
+.feelings {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap; /* Allows wrapping for smaller screens */
+}
+
+.feelings label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.form-actions button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background-color: #ccc;
+}
+
+.submit-btn {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 768px) {
+  .new-discussion-form {
+    width: 80%; /* Make form wider on smaller screens */
+  }
+
+  .forum-header h2 {
+    font-size: 2em; /* Reduce the size of the header */
+  }
+}
+
+@media (max-width: 576px) {
+  .new-discussion-form {
+    width: 95%; /* Full width on very small screens */
+    padding: 10px;
+  }
+
+  .forum-header h2 {
+    font-size: 1.8em; /* Further reduce header font size */
+  }
+
+  .feelings {
+    flex-direction: column; /* Stack the radio buttons vertically on small screens */
+    gap: 10px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    align-items: flex-end; /* Stack buttons vertically */
+    gap: 5px;
+  }
+
+  .form-actions button {
+    width: 100%; /* Make buttons full width on small screens */
+  }
+}
